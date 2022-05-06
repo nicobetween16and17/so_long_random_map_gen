@@ -46,7 +46,7 @@ int	charachter_position(int range, int start, unsigned int r)
 	if (!cp)
 		return (start);
 	while (++i < range)
-		cp[i] = (i * (rand() % range)) + start;
+		cp[i] = (i * (start - 1)) + (rand() % range) + start;
 	i = rand() % range;
 	res = cp[i];
 	free(cp);
@@ -66,7 +66,7 @@ void	fill_file(int height, int width, char *s, unsigned int r)
 			s[i[2]++] = selected(i, width, height, ++r);
 	}
 	s[i[2]] = 0;
-	s[charachter_position(height - 2, width + 3, r)] = 'P';
+	s[charachter_position(height - 2, width + 2, r)] = 'P';
 }
 
 void	generate_random_map(int height, int width, unsigned int r, char *name)
@@ -82,9 +82,9 @@ void	generate_random_map(int height, int width, unsigned int r, char *name)
 	fill_file(height, width, s, r++);
 	if (ft_strchr(s, 'E') == NULL)
 	{
-		ran[0] = charachter_position(height - 2, width + 3, r);
+		ran[0] = charachter_position(height - 2, width + 2, r);
 		while (s[ran[0]] == 'P')
-			ran[0] = charachter_position(height - 2, width + 3, ++r);
+			ran[0] = charachter_position(height - 2, width + 2, ++r);
 		s[ran[0]] = 'E';
 	}
 	tempo = ft_strjoin("echo "" > ", name);
