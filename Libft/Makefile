@@ -61,10 +61,10 @@ OBJS	=	${SRCS:.c=.o}
 
 
 .c.o: 
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
 
 ${NAME}: ${OBJS}
-		${ARRCS} ${NAME} ${OBJS} -c ${INCS}
+		${ARRCS} ${NAME} ${OBJS}
 
 all: ${NAME}
 

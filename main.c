@@ -6,11 +6,11 @@
 /*   By: niespana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:16:23 by niespana          #+#    #+#             */
-/*   Updated: 2022/04/05 11:16:24 by niespana         ###   ########.fr       */
+/*   Updated: 2022/05/12 15:57:58 by niespana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Libft/libft.h"
+#include "./Libft/libft.h"
 #include <fcntl.h>
 #include <stdio.h>
 
